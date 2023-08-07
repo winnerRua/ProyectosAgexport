@@ -1,0 +1,14 @@
+--Creación de tabla colaborador
+CREATE TABLE FacturaEnc(
+	FacturaId INT IDENTITY (1,1) NOT NULL,
+	NIT VARCHAR(15),
+	Fecha DATETIME NOT NULL,
+	Correlativo VARCHAR(20) NOT NULL,
+	)
+
+CREATE TABLE FacturaDet(
+	FacturaId INT NOT NULL REFERENCES FacturaEnc(FacturaId),
+	Producto VARCHAR(100),
+	Cantidad INT,
+	Total DECIMAL(8,2)
+	)

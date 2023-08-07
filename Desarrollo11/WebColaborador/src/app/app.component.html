@@ -1,0 +1,124 @@
+<div class="container">
+  <div class="row text-center mt-4">
+    <div class="col">
+      <!--<img src="https://p4.wallpaperbetter.com/wallpaper/901/505/133/cats-dogs-pets-wallpaper-preview.jpg" alt=""
+        class="img-fluid" width="200px">-->
+    </div>
+  </div>
+  <div class="row text-center mt-5">
+    <div class="col">
+      <h2>CRUD Colaboradores</h2>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-2">
+      <label for="txtId" class="from-label">ID Colaborador</label>
+      <input type="text" name="id" id="txtId" class="form-control" [(ngModel)]="colaborador.colaboradorId" disabled="true">
+    </div>
+    <div class="col-md-4">
+      <label for="txtNombre" class="from-label">Nombres</label>
+      <input type="text" name="id" id="txtNombres" class="form-control" [(ngModel)]="colaborador.nombres">
+    </div>
+    <div class="col-md-2">
+      <label for="txtEdad" class="from-label">Apellidos</label>
+      <input type="text" name="id" id="txtApellidos" class="form-control" [(ngModel)]="colaborador.apellidos">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">Género</label>
+      <input type="text" name="id" id="txtGenero" class="form-control" [(ngModel)]="colaborador.genero">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">Estado Civil</label>
+      <input type="text" name="id" id="txtEstadoCivil" class="form-control" [(ngModel)]="colaborador.estadoCivil">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">Fecha Nacimiento</label>
+      <input type="text" name="id" id="txtFeNac" class="form-control" [(ngModel)]="colaborador.fechaNacimiento">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">Edad</label>
+      <input type="text" name="id" id="txtEdad" class="form-control" [(ngModel)]="colaborador.edad">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">DPI</label>
+      <input type="text" name="id" id="txtDpi" class="form-control" [(ngModel)]="colaborador.dpi">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">IGSS</label>
+      <input type="text" name="id" id="txtIgss" class="form-control" [(ngModel)]="colaborador.igss">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">Irtra</label>
+      <input type="text" name="id" id="txtIrtra" class="form-control" [(ngModel)]="colaborador.irtra">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">Pasaporte</label>
+      <input type="text" name="id" id="txtPasaporte" class="form-control" [(ngModel)]="colaborador.pasaporte">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">Departamento</label>
+      <input type="text" name="id" id="txtDepto" class="form-control" [(ngModel)]="colaborador.departamento">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">Municipio</label>
+      <input type="text" name="id" id="txtMun" class="form-control" [(ngModel)]="colaborador.municipio">
+    </div>
+    <div class="col-md-4">
+      <label for="txtDesc" class="from-label">Dirección Residencia</label>
+      <input type="text" name="id" id="txtDirRes" class="form-control" [(ngModel)]="colaborador.direccionResidencia">
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col">
+      <button class="btn btn-success" type="button" (click)="onAddColaborador(colaborador)">Agregar</button>
+      <button class="btn btn-warning m-2" type="button" (click)="onUpdateColaborador(colaborador)">Modificar</button>
+      <button class="btn btn-danger" type="button" (click)="onDeleteColaborador(colaborador.colaboradorId)">Eliminar</button>
+      <button class="btn btn-primary m-2" type="button" (click)="clear()">Limpiar</button>
+    </div>
+    
+  </div>
+  <div class="row mt-5">
+    <div class="col">
+      <table id="dtMascota" class="table table-striped" style="width: 100%;">
+        <thead>
+          <tr>
+            <th>Seleccionar</th>
+            <th>Id</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Géreno</th>
+            <th>Estado Civil</th>
+            <th>Fecha Nacimiento</th>
+            <th>Edad</th>
+            <th>DPI</th>
+            <th>IGSS</th>
+            <th>Irtra</th>
+            <th>Pasaporte</th>
+            <th>Departamento</th>
+            <th>Municipio</th>
+            <th>Dirección Residencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of datatable">
+            <td><input type="button" value="Seleccionar" (click)="onSetData(item)"></td>
+            <td> {{ item.colaboradorId }} </td>
+            <td>{{ item.nombres }}</td>
+            <td>{{ item.apellidos }}</td>
+            <td>{{ item.genero }}</td>
+            <td> {{ item.estadoCivil }} </td>
+            <td>{{ item.fechaNacimiento }}</td>
+            <td>{{ item.edad }}</td>
+            <td>{{ item.dpi }}</td>
+            <td> {{ item.igss }} </td>
+            <td>{{ item.irtra }}</td>
+            <td>{{ item.pasaporte }}</td>
+            <td>{{ item.departamento }}</td>
+            <td> {{ item.municipio }} </td>
+            <td>{{ item.direccionResidencia }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

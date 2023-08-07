@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "43b85510-5c0d-463a-83d3-7ffbb0ae349e",
+		"name": "Proyectos AgexPort",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12010746"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44366/api/Colaborador",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"colaboradorId\" : 1,\r\n    \"nombres\" : \"Edwin\",\r\n    \"apellidos\" : \"Ruano\",\r\n    \"genero\" : \"Masculino\",\r\n    \"estadoCivil\" : \"Soltero\",\r\n    \"fechaNacimiento\" : \"1994-06-03\",\r\n    \"edad\" : \"29\",\r\n    \"dpi\" : 2435468150501,\r\n    \"igss\" : 2012123456,\r\n    \"irtra\" : 123456987,\r\n    \"pasaporte\" : \"ABC-1234567\",\r\n    \"departamento\" : \"Escuintla\",\r\n    \"municipio\" : \"Escuintla\",\r\n    \"direccionResidencia\" : \"1ra. Ave. 1-42 Villas de Costa Bella, Zona 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44366/api/Colaborador/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44366",
+					"path": [
+						"api",
+						"Colaborador",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/Colaborador Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\" : \"Edwin\",\r\n    \"apellidos\" : \"Ruano\",\r\n    \"genero\" : \"Masculino\",\r\n    \"estadoCivil\" : \"Soltero\",\r\n    \"fechaNacimiento\" : \"1994-06-03\",\r\n    \"edad\" : \"29\",\r\n    \"dpi\" : 2435468150501,\r\n    \"igss\" : 2012123456,\r\n    \"irtra\" : 123456987,\r\n    \"pasaporte\" : \"ABC-1234567\",\r\n    \"departamento\" : \"Escuintla\",\r\n    \"municipio\" : \"Escuintla\",\r\n    \"direccionResidencia\" : \"1ra. Ave. 1-42 Villas de Costa Bella, Zona 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44366/api/Colaborador/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44366",
+					"path": [
+						"api",
+						"Colaborador",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/Colaborador Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"colaboradorId\" : 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44366/api/Colaborador/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44366",
+					"path": [
+						"api",
+						"Colaborador",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
