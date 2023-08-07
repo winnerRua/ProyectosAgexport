@@ -32,6 +32,16 @@
       <input type="text" name="id" id="txtEstadoCivil" class="form-control" [(ngModel)]="colaborador.estadoCivil">
     </div>
     <div class="col-md-4">
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker">
+          </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    </div>
+    <div class="col-md-4">
       <label for="txtDesc" class="from-label">Fecha Nacimiento</label>
       <input type="text" name="id" id="txtFeNac" class="form-control" [(ngModel)]="colaborador.fechaNacimiento">
     </div>
@@ -102,20 +112,20 @@
         <tbody>
           <tr *ngFor="let item of datatable">
             <td><input type="button" value="Seleccionar" (click)="onSetData(item)"></td>
-            <td> {{ item.colaboradorId }} </td>
-            <td>{{ item.nombres }}</td>
-            <td>{{ item.apellidos }}</td>
-            <td>{{ item.genero }}</td>
-            <td> {{ item.estadoCivil }} </td>
-            <td>{{ item.fechaNacimiento }}</td>
-            <td>{{ item.edad }}</td>
-            <td>{{ item.dpi }}</td>
-            <td> {{ item.igss }} </td>
-            <td>{{ item.irtra }}</td>
-            <td>{{ item.pasaporte }}</td>
-            <td>{{ item.departamento }}</td>
-            <td> {{ item.municipio }} </td>
-            <td>{{ item.direccionResidencia }}</td>
+            <td> {{ item.ColaboradorId }} </td>
+            <td>{{ item.Nombres }}</td>
+            <td>{{ item.Apellidos }}</td>
+            <td>{{ item.Genero }}</td>
+            <td> {{ item.EstadoCivil }} </td>
+            <td>{{ item.FechaNacimiento }}</td>
+            <td>{{ item.Edad }}</td>
+            <td>{{ item.DPI }}</td>
+            <td> {{ item.IGSS }} </td>
+            <td>{{ item.IRTRA }}</td>
+            <td>{{ item.Pasaporte }}</td>
+            <td>{{ item.Departamento }}</td>
+            <td> {{ item.Municipio }} </td>
+            <td>{{ item.DireccionResidencia }}</td>
           </tr>
         </tbody>
       </table>

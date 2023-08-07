@@ -64,7 +64,7 @@ export class AppComponent {
   }
 
   onSetData(select:any){
-    this.colaborador.colaboradorId = select.colaboradorId;
+    this.colaborador.colaboradorId= select.ColaboradorId;
     this.colaborador.nombres = select.nombres;
     this.colaborador.apellidos = select.apellidos;
     this.colaborador.genero = select.genero;

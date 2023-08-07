@@ -46,7 +46,7 @@ namespace Desarrollo1.Models
         }
 
         //Creación de un constructor más para la actualización
-        public Colaborador( string nombres, string apellidos, string genero, string estadoCivil, DateTime fechaNacimiento, int edad, int dpi, int igss, int irtra, string pasaporte, string departamento, string municipio, string direccionResidencia)
+        public Colaborador(string nombres, string apellidos, string genero, string estadoCivil, DateTime fechaNacimiento, int edad, long dpi, long igss, long irtra, string pasaporte, string departamento, string municipio, string direccionResidencia)
         {
             Nombres = nombres;
             Apellidos = apellidos;
